@@ -18,6 +18,7 @@ class Player {
     this.score = 0;
     this.playerCurrentCards = [];
     this.balance = 2000;
+    this.displayPlayerScore = document.querySelector(".player-score")
   }
 
   bet(value) {
@@ -27,6 +28,7 @@ class Player {
   hit(card, cardValue) {
     this.playerCurrentCards.push(card)
     this.score += cardValue
+    this.displayPlayerScore.innerHTML = `${this.score}`
   }
 
   stay() {
@@ -58,6 +60,12 @@ class Dealer {
 
 class GameRules {
 
+}
+
+class HandleClicks {
+  constructor() {
+
+  }
 }
 
 class GamePlay {
